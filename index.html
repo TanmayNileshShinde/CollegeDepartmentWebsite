@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Department of Computer Engineering - Shah & Anchor Kutchhi Engineering College (SAKEC), Mumbai. Explore faculty, laboratories, syllabus, achievements, and placement statistics.">
+    <meta name="keywords" content="SAKEC, Computer Engineering, Mumbai University, Engineering College Mumbai, Placements, Faculty, Laboratories, Syllabus, AICTE, NBA">
+    <meta name="author" content="Shah & Anchor Kutchhi Engineering College">
+    <title>Department of Computer Engineering | SAKEC Mumbai</title>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. Top Notice & Accreditation Strip -->
+    <div class="top-notice-strip">
+        <div class="container">
+            <div class="accreditation-pills">
+                <span class="acc-pill"><i class="fa-solid fa-award"></i> NBA Accredited</span>
+                <span class="acc-pill"><i class="fa-solid fa-star"></i> NAAC 'A' Grade</span>
+                <span class="acc-pill"><i class="fa-solid fa-graduation-cap"></i> Affiliated to University of Mumbai</span>
+                <span class="acc-pill"><i class="fa-solid fa-building-columns"></i> Approved by AICTE</span>
+            </div>
+            <div class="top-contact-links">
+                <a href="tel:+912225580854"><i class="fa-solid fa-phone"></i> +91 22 2558 0854</a>
+                <a href="mailto:computer@sakec.ac.in"><i class="fa-solid fa-envelope"></i> computer@sakec.ac.in</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Sticky Navbar -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="brand-wrapper">
+                    <div class="brand-logo-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>SAKEC COMP</h1>
+                        <p>Department of Computer Engineering</p>
+                    </div>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                    <li><a href="#faculty" class="nav-link"><i class="fa-solid fa-user-group"></i> Faculty</a></li>
+                    <li><a href="#laboratories" class="nav-link"><i class="fa-solid fa-microchip"></i> Laboratories</a></li>
+                    <li><a href="#syllabus" class="nav-link"><i class="fa-solid fa-book-open"></i> Syllabus</a></li>
+                    <li><a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+                    <li><a href="#placements" class="nav-link"><i class="fa-solid fa-chart-line"></i> Placements</a></li>
+                    <li><a href="#notices" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Notices</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                </ul>
+
+                <div class="header-actions">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="#contact" class="btn btn-primary btn-sm">Enquire Now</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-glow-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i> Centre of Computing Excellence Since 1996
+                </div>
+                <h2 class="hero-title">
+                    Department of <br><span>Computer Engineering</span>
+                </h2>
+                <p class="hero-desc">
+                    Fostering innovation in Artificial Intelligence, Cloud Systems, Cybersecurity, and Software Engineering. Delivering rigorous academia and practical industry readiness at Shah &amp; Anchor Kutchhi Engineering College.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#placements" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-chart-pie"></i> Placement Statistics
+                    </a>
+                    <a href="#syllabus" class="btn btn-secondary btn-lg">
+                        <i class="fa-solid fa-graduation-cap"></i> Explore Syllabus
+                    </a>
+                    <a href="#faculty" class="btn btn-outline-primary btn-lg">
+                        <i class="fa-solid fa-users"></i> Meet Faculty
+                    </a>
+                </div>
+
+                <!-- Hero Key Stats Grid -->
+                <div class="hero-stats-grid" id="heroStatsContainer">
+                    <!-- Populated by main.js -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. About & Vision / Mission Section -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Academic Foundation</div>
+                <h2 class="section-title">About the Department</h2>
+                <p class="section-subtitle">
+                    Dedicated to nurturing analytical thinking, ethical problem solving, and technological leadership.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <!-- HOD Message Card -->
+                <div class="hod-card">
+                    <div class="hod-header">
+                        <div class="hod-avatar">UB</div>
+                        <div class="hod-meta">
+                            <h3>Dr. Uday Bhave</h3>
+                            <p>Professor &amp; Head of Department</p>
+                            <small class="text-muted">Ph.D. (Computer Engg), M.E., B.E. &bull; 25+ Yrs Exp.</small>
+                        </div>
+                    </div>
+                    <div class="hod-quote">
+                        "Our department stands at the forefront of technological transformation. By combining foundational algorithmic rigour with modern hands-on labs in AI, Cloud Computing, and Cybersecurity, we prepare our graduates to innovate, build resilient systems, and lead the global digital era with highest ethical standards."
+                    </div>
+                    <div class="hod-contact-row">
+                        <span><i class="fa-solid fa-envelope"></i> uday.bhave@sakec.ac.in</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Cabin 402, 4th Floor</span>
+                    </div>
+                </div>
+
+                <!-- Vision & Mission Column -->
+                <div class="vision-mission-column">
+                    <div class="vm-card">
+                        <h4><i class="fa-solid fa-compass"></i> Department Vision</h4>
+                        <p>
+                            To become a globally recognized center of excellence in Computer Engineering education and research, producing technologically competent, innovative, and ethically grounded professionals who contribute meaningfully to societal progress.
+                        </p>
+                    </div>
+
+                    <div class="vm-card">
+                        <h4><i class="fa-solid fa-bullseye"></i> Department Mission</h4>
+                        <ul class="vm-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Deliver rigorous, experiential, and industry-aligned computing education through state-of-the-art curricula and pedagogical practices.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Establish modern laboratory infrastructure to foster high-impact research, innovation, and technological entrepreneurship.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Cultivate ethical integrity, environmental consciousness, lifelong learning aptitude, and collaborative leadership among students.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Faculty Members Directory -->
+    <section class="section" id="faculty">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Distinguished Educators</div>
+                <h2 class="section-title">Faculty Members</h2>
+                <p class="section-subtitle">
+                    Learn from experienced professors, passionate researchers, and certified industry practitioners.
+                </p>
+            </div>
+
+            <!-- Controls: Category Filters & Search -->
+            <div class="directory-controls">
+                <div class="filter-pills-group">
+                    <button class="filter-btn faculty-filter-btn active" data-filter="all">All Faculty (12)</button>
+                    <button class="filter-btn faculty-filter-btn" data-filter="professor">Professors</button>
+                    <button class="filter-btn faculty-filter-btn" data-filter="associate">Associate Professors</button>
+                    <button class="filter-btn faculty-filter-btn" data-filter="assistant">Assistant Professors</button>
+                </div>
+
+                <div class="search-input-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="facultySearchInput" class="search-input" placeholder="Search by name, research area..." aria-label="Search faculty">
+                </div>
+            </div>
+
+            <!-- Faculty Grid -->
+            <div class="faculty-grid" id="facultyGrid">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Laboratories & Infrastructure Showcase -->
+    <section class="section section-alt" id="laboratories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Practical Learning Spaces</div>
+                <h2 class="section-title">Laboratories &amp; Infrastructure</h2>
+                <p class="section-subtitle">
+                    8 state-of-the-art specialized computing labs equipped with high-end workstations, enterprise GPUs, and industry software.
+                </p>
+            </div>
+
+            <!-- Lab Domain Filters -->
+            <div class="directory-controls">
+                <div class="filter-pills-group">
+                    <button class="filter-btn lab-filter-btn active" data-filter="all">All Labs (8)</button>
+                    <button class="filter-btn lab-filter-btn" data-filter="ai-data">AI &amp; Data Science</button>
+                    <button class="filter-btn lab-filter-btn" data-filter="systems">Systems &amp; Security</button>
+                    <button class="filter-btn lab-filter-btn" data-filter="software">Software Engineering</button>
+                    <button class="filter-btn lab-filter-btn" data-filter="hardware">IoT &amp; Hardware</button>
+                </div>
+            </div>
+
+            <!-- Labs Grid -->
+            <div class="labs-grid" id="labsGrid">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Syllabus & Curriculum -->
+    <section class="section" id="syllabus">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Academic Framework</div>
+                <h2 class="section-title">Syllabus &amp; Curriculum</h2>
+                <p class="section-subtitle">
+                    University of Mumbai Rev-2019 'C' Scheme (Choice Based Credit System / NEP 2020 Aligned).
+                </p>
+            </div>
+
+            <!-- Controls: Semester Navigation & Scheme -->
+            <div class="syllabus-controls-bar">
+                <div class="syllabus-sem-nav" id="syllabusSemNav">
+                    <!-- Sem tabs injected via main.js -->
+                </div>
+                <div class="syllabus-scheme-badge">
+                    <i class="fa-solid fa-file-shield"></i> Mumbai University Scheme-C
+                    <button class="btn btn-outline-primary btn-sm" onclick="downloadSyllabusPDF()">
+                        <i class="fa-solid fa-print"></i> Print / Save PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- Syllabus Table Container -->
+            <div class="syllabus-table-wrapper">
+                <div class="syllabus-table-header">
+                    <div>
+                        <h3 id="currentSemTitle">Semester III</h3>
+                        <p id="currentSemYear">Second Year (SE)</p>
+                    </div>
+                    <span class="badge-type theory"><i class="fa-solid fa-clock"></i> 24 Contact Hrs/Wk</span>
+                </div>
+
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 14%;">Course Code</th>
+                            <th style="width: 42%;">Course Title &amp; Outline</th>
+                            <th style="width: 14%;">Type</th>
+                            <th style="width: 12%; text-align: center;">Hours/Wk</th>
+                            <th style="width: 10%; text-align: center;">Credits</th>
+                            <th style="width: 8%; text-align: right;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="syllabusTableBody">
+                        <!-- Injected via main.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Achievements & Accolades -->
+    <section class="section section-alt" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Celebrating Milestones</div>
+                <h2 class="section-title">Department Achievements</h2>
+                <p class="section-subtitle">
+                    National hackathon triumphs, funded research grants, patents, and distinguished student chapter recognitions.
+                </p>
+            </div>
+
+            <!-- Achievements Category Filter -->
+            <div class="directory-controls">
+                <div class="filter-pills-group">
+                    <button class="filter-btn achieve-filter-btn active" data-filter="all">All Honors</button>
+                    <button class="filter-btn achieve-filter-btn" data-filter="hackathon">Hackathons</button>
+                    <button class="filter-btn achieve-filter-btn" data-filter="research">Research &amp; Grants</button>
+                    <button class="filter-btn achieve-filter-btn" data-filter="patent">Patents</button>
+                    <button class="filter-btn achieve-filter-btn" data-filter="chapter">Student Chapters</button>
+                </div>
+            </div>
+
+            <!-- Achievements Grid -->
+            <div class="achievements-grid" id="achievementsGrid">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Placement Statistics & Recruiter Network -->
+    <section class="section" id="placements">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Career Milestones</div>
+                <h2 class="section-title">Placement Statistics</h2>
+                <p class="section-subtitle">
+                    Consistently driving strong placement records across top global product companies, financial institutions, and tech giants.
+                </p>
+            </div>
+
+            <!-- Key Placement KPIs -->
+            <div class="placement-key-stats">
+                <div class="pkg-stat-card">
+                    <div class="pkg-stat-val" id="statHighestPkg">₹24.50 LPA</div>
+                    <div class="pkg-stat-lbl">Highest Package (Amazon AWS)</div>
+                </div>
+                <div class="pkg-stat-card">
+                    <div class="pkg-stat-val" id="statAvgPkg">₹7.85 LPA</div>
+                    <div class="pkg-stat-lbl">Average CTC Package</div>
+                </div>
+                <div class="pkg-stat-card">
+                    <div class="pkg-stat-val" id="statPlacementRate">94.2%</div>
+                    <div class="pkg-stat-lbl">Overall Placement Percentage</div>
+                </div>
+                <div class="pkg-stat-card">
+                    <div class="pkg-stat-val" id="statTotalOffers">248 Offers</div>
+                    <div class="pkg-stat-lbl">Total Offers from 88+ Companies</div>
+                </div>
+            </div>
+
+            <!-- Interactive Charts Row -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h4><i class="fa-solid fa-chart-column"></i> 5-Year Placement &amp; Package Growth</h4>
+                        <p>Year-over-Year comparison of Highest Package, Average CTC, and Placement Rate %</p>
+                    </div>
+                    <div class="chart-canvas-container">
+                        <canvas id="placementTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h4><i class="fa-solid fa-chart-pie"></i> Salary Tier Distribution</h4>
+                        <p>Breakdown of students across Super Dream, Dream, and Core Prime brackets</p>
+                    </div>
+                    <div class="chart-canvas-container">
+                        <canvas id="packageDistChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sector Share Chart -->
+            <div class="chart-card" style="margin-bottom: 2rem;">
+                <div class="chart-card-header">
+                    <h4><i class="fa-solid fa-network-wired"></i> Sector-Wise Placement Share</h4>
+                    <p>Percentage of total recruitment across software, cloud, fintech, and analytics domains</p>
+                </div>
+                <div class="chart-canvas-container" style="height: 240px;">
+                    <canvas id="sectorShareChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Top Recruiters Marquee -->
+            <div class="recruiters-section">
+                <div class="section-header" style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.35rem;">Distinguished Recruiting Partners</h3>
+                    <p class="section-subtitle">Leading multinational enterprises that recruit from our department</p>
+                </div>
+                <div class="recruiters-marquee-container">
+                    <div class="recruiters-marquee" id="recruitersMarquee">
+                        <!-- Injected via main.js -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Testimonials -->
+            <div class="section-header" style="margin: 3.5rem auto 1rem auto;">
+                <h3 style="font-size: 1.35rem;">Alumni &amp; Placed Student Voices</h3>
+                <p class="section-subtitle">Real experiences and career pathways from our successful graduates</p>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Notices & Department Announcements -->
+    <section class="section section-alt" id="notices">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Official Circulars</div>
+                <h2 class="section-title">Department Notice Board</h2>
+                <p class="section-subtitle">
+                    Latest schedules, project deadlines, placement registration circulars, and technical symposiums.
+                </p>
+            </div>
+
+            <div class="notices-container" id="noticesContainer">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Contact & Department Enquiry -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Get in Touch</div>
+                <h2 class="section-title">Contact the Department</h2>
+                <p class="section-subtitle">
+                    Have academic questions, collaboration proposals, or admission queries? Reach out to us.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-panel">
+                    <div class="contact-info-card">
+                        <h4>Department Office</h4>
+                        <ul class="contact-details-list">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <strong>Shah &amp; Anchor Kutchhi Engineering College</strong><br>
+                                    Department of Computer Engineering (4th Floor),<br>
+                                    Mahavir Education Trust Chowk, W. T. Patil Marg,<br>
+                                    Next to Dukes Co., Chembur, Mumbai, Maharashtra 400088.
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong> +91 22 2558 0854 / 2558 0825<br>
+                                    <strong>Fax:</strong> +91 22 2556 8100
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <strong>Department Email:</strong> computer@sakec.ac.in<br>
+                                    <strong>HOD Direct:</strong> uday.bhave@sakec.ac.in
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                <div>
+                                    <strong>Office Hours:</strong> Monday – Saturday: 9:00 AM – 5:00 PM<br>
+                                    (Second &amp; Fourth Saturdays Closed)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h4>Student Chapters &amp; Clubs</h4>
+                        <p class="text-muted" style="font-size: 0.86rem; margin-bottom: 0.85rem;">
+                            Join our vibrant student communities for workshops, coding competitions, and mentorship:
+                        </p>
+                        <div class="modal-tags">
+                            <span class="tag tag-lg"><i class="fa-solid fa-users"></i> CSI SAKEC</span>
+                            <span class="tag tag-lg"><i class="fa-solid fa-code"></i> ACM Student Chapter</span>
+                            <span class="tag tag-lg"><i class="fa-solid fa-laptop-code"></i> SAKEC CodeCell</span>
+                            <span class="tag tag-lg"><i class="fa-solid fa-robot"></i> AI / ML Club</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact / Enquiry Form -->
+                <div class="contact-form-card">
+                    <h4>Department Enquiry Form</h4>
+                    <p>Send a message directly to the Computer Engineering Department administrative desk.</p>
+
+                    <div id="formAlertBox" class="alert-box"></div>
+
+                    <form id="departmentContactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" class="form-control" placeholder="e.g. Tanmay Shinde" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. yourname@domain.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Enquiry Subject *</label>
+                            <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Final Year Project Review / Syllabus Clarification" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message / Details *</label>
+                            <textarea id="contactMessage" class="form-control" placeholder="Write your enquiry or question here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <i class="fa-regular fa-paper-plane"></i> Send Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-brand">
+                    <h3>SAKEC Computer Engineering</h3>
+                    <p>
+                        Shah &amp; Anchor Kutchhi Engineering College, Chembur, Mumbai. Established in 1996, our Department of Computer Engineering is committed to academic excellence, state-of-the-art research, and ethical innovation.
+                    </p>
+                    <div class="modal-tags">
+                        <span class="tag"><i class="fa-solid fa-check"></i> NBA Accredited</span>
+                        <span class="tag"><i class="fa-solid fa-check"></i> NAAC 'A' Grade</span>
+                        <span class="tag"><i class="fa-solid fa-check"></i> ISO 9001:2015</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Quick Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Department</a></li>
+                        <li><a href="#faculty"><i class="fa-solid fa-angle-right"></i> Faculty Directory</a></li>
+                        <li><a href="#laboratories"><i class="fa-solid fa-angle-right"></i> Laboratories</a></li>
+                        <li><a href="#syllabus"><i class="fa-solid fa-angle-right"></i> Syllabus Scheme</a></li>
+                        <li><a href="#placements"><i class="fa-solid fa-angle-right"></i> Placement Statistics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Student Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#achievements"><i class="fa-solid fa-angle-right"></i> SIH &amp; Hackathons</a></li>
+                        <li><a href="#notices"><i class="fa-solid fa-angle-right"></i> Notice Board</a></li>
+                        <li><a href="#placements"><i class="fa-solid fa-angle-right"></i> Top Recruiters</a></li>
+                        <li><a href="https://mu.ac.in" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Mumbai University</a></li>
+                        <li><a href="https://swayam.gov.in" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> NPTEL / SWAYAM</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Connect With SAKEC</h5>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem;">
+                        Stay updated with our technical events, research workshops, and departmental activities.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <a href="https://www.linkedin.com" target="_blank" class="theme-toggle-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com" target="_blank" class="theme-toggle-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="theme-toggle-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="theme-toggle-btn" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Department of Computer Engineering, Shah &amp; Anchor Kutchhi Engineering College. All Rights Reserved.
+                </div>
+                <div>
+                    Developed &amp; Maintained for WT-II Lab &bull; Deployed on GitHub Pages
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 13. Back to Top Button -->
+    <button class="back-to-top-btn" id="backToTopBtn" title="Back to top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- 14. Modals -->
+    <!-- Faculty Detail Modal -->
+    <div class="modal-overlay" id="facultyDetailModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="facultyModalTitle"><i class="fa-solid fa-user-tie"></i> Faculty Profile</h3>
+                <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="facultyModalBody">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Module Detail Modal -->
+    <div class="modal-overlay" id="courseDetailModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="courseModalTitle"><i class="fa-solid fa-book-open"></i> Course Details</h3>
+                <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="courseModalBody">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Detail Modal -->
+    <div class="modal-overlay" id="noticeDetailModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="noticeModalTitle"><i class="fa-solid fa-bullhorn"></i> Department Announcement</h3>
+                <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="noticeModalBody">
+                <!-- Injected via main.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
