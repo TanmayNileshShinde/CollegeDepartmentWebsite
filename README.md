@@ -2,7 +2,7 @@
 
 A modern, responsive, and comprehensive academic portal designed and deployed for the **Department of Computer Engineering** at **Shah & Anchor Kutchhi Engineering College (SAKEC)**, Mumbai.
 
-Deployed on **GitHub Pages**.
+🌐 **Live Website**: [https://tanmaynileshshinde.github.io/CollegeDepartmentWebsite/](https://tanmaynileshshinde.github.io/CollegeDepartmentWebsite/)
 
 ---
 
